@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.user = new User();
   }
   onSubmit(f: NgForm): void {
-    if (this.user.userName !== '' && this.user.password !== '') {
+    if (this.user.userName && this.user.password) {
       this.loading = true;
       this.auth.login(this.user).subscribe(
         (success) => {

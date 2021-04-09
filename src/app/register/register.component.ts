@@ -22,10 +22,7 @@ export class RegisterComponent implements OnInit {
     this.registerUser = new RegisterUser();
   }
   onSubmit(f: NgForm): void {
-    if (
-      this.registerUser.userName !== "" &&
-      this.registerUser.password !== ""
-    ) {
+    if (this.registerUser.userName && this.registerUser.password) {
       this.loading = true;
       this.auth.register(this.registerUser).subscribe(
         () => {
@@ -39,9 +36,9 @@ export class RegisterComponent implements OnInit {
           this.loading = false;
         }
       );
-    }else{
+    } else {
       this.success = false;
-      this.warning = "Username or password is an empty";
+      this.warning = 'Username or password is an empty';
       this.loading = false;
     }
   }
