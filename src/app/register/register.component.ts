@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
       );
     } else {
       this.success = false;
-      this.warning = 'Username or password is an empty';
+      this.warning = 'Username or password field is empty';
       this.loading = false;
     }
   }

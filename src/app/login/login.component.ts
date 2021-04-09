@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         }
       );
     } else {
-      this.warning = 'Username or password is an empty';
+      this.warning = 'Username or password field is empty';
       this.loading = false;
     }
   }
